@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://clibkqgqp01cv"]
+
+[ext_resource type="Script" uid="uid://b8b8joght61cf" path="res://addons/godot_state_provider/nodes/multi_provider/multi_provider.gd" id="1_copyh"]
+[ext_resource type="Script" uid="uid://drltimtohybx5" path="res://example/navigation/navigation_state_machine.gd" id="2_x4jl4"]
+[ext_resource type="Script" uid="uid://cf6ekksd765sd" path="res://example/navigation/navigation_listener.gd" id="3_0dsxd"]
+[ext_resource type="PackedScene" uid="uid://d0lxbwx6t5u28" path="res://example/game/game.tscn" id="4_copyh"]
+[ext_resource type="PackedScene" uid="uid://581lkso6wgj1" path="res://example/menu/menu.tscn" id="5_4nrmb"]
+
+[node name="MultiProvider" type="Node" unique_id=1045639931]
+script = ExtResource("1_copyh")
+scripts = Array[Script]([ExtResource("2_x4jl4")])
+metadata/_custom_type_script = "uid://b8b8joght61cf"
+
+[node name="NavigationListener" type="Node" parent="." unique_id=944907761]
+script = ExtResource("3_0dsxd")
+menu_packed_scene = ExtResource("5_4nrmb")
+game_packed_scene = ExtResource("4_copyh")
