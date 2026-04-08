@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bx6n2nak3p8yc"]
+
+[ext_resource type="Script" uid="uid://cp7n3y8m2k4xb" path="res://example/game/player/player.gd" id="1_i8tch"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1"]
+radius = 14.0
+height = 36.0
+
+[node name="Player" type="CharacterBody2D" unique_id=123456789]
+
+[node name="PlayerStateMachine" type="Node" parent="." unique_id=192720953 node_paths=PackedStringArray("player")]
+script = ExtResource("1_i8tch")
+player = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=234567890]
+shape = SubResource("CapsuleShape2D_1")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=345678901]
+color = Color(0.2, 0.6, 1, 1)
+polygon = PackedVector2Array(0, -20, 15, 15, -15, 15)

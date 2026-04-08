@@ -1,8 +1,5 @@
 class_name StateProcessor extends Consumer
 
-func _init(processorStateMachine: ProcessorStateMachine) -> void:
-	_value_container = ValueContainer.new(processorStateMachine)
-
 func get_value() -> ProcessorStateMachine:
 	return super.get_value()
 

@@ -3,7 +3,7 @@ class_name ValueContainer extends RefCounted
 var _value: Value
 
 func _init(value: Value) -> void:
-	value = value
+	_value = value
 
 func get_value() -> Value:
 	return _value

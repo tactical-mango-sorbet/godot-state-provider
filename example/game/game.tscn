@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d0lxbwx6t5u28"]
 
 [ext_resource type="Script" uid="uid://vb4dhxvitbir" path="res://example/game/game.gd" id="1_xlxj8"]
+[ext_resource type="PackedScene" uid="uid://bx6n2nak3p8yc" path="res://example/game/player/player.tscn" id="2_s7dua"]
 
 [node name="Game" type="Node" unique_id=445720562]
 script = ExtResource("1_xlxj8")
@@ -23,3 +24,6 @@ offset_top = -20.0
 offset_right = 60.0
 offset_bottom = 20.0
 text = "Go to Menu"
+
+[node name="Player" parent="." unique_id=123456789 instance=ExtResource("2_s7dua")]
+position = Vector2(665, 377)
