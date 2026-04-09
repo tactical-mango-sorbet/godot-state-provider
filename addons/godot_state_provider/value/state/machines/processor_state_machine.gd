@@ -7,3 +7,7 @@ func _physics_process(delta: float, processor) -> void:
 func _process(delta: float, processor) -> void:
 	get_state()._process(delta, processor)
 	processor._state_process(delta, get_state())
+
+func _draw(processor) -> void:
+	get_state()._draw(processor)
+	processor._state_draw(get_state())
