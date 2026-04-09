@@ -12,5 +12,5 @@ func _init(script_factory: Callable = Callable.create(self, "default_script_fact
 func default_script_factory() -> Script:
 	return StateMachine
 
-func _on_state_changed(_state: State) -> void:
+func _on_state_changed(_state) -> void:
 	pass

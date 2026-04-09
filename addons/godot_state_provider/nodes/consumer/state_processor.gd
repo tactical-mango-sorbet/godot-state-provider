@@ -9,14 +9,14 @@ func _physics_process(delta: float) -> void:
 func _process(delta: float) -> void:
 	get_value()._process(delta, self)
 
-func _state_physics_process(_delta: float, _state: ProcessorState) -> void:
-	pass
-
-func _state_process(_delta: float, _state: ProcessorState) -> void:
-	pass
-
 func _draw() -> void:
 	get_value()._draw(self)
 
-func _state_draw(_state: ProcessorState) -> void:
+func _state_physics_process(_delta: float, _state) -> void:
+	pass
+
+func _state_process(_delta: float, _state) -> void:
+	pass
+
+func _state_draw(_state) -> void:
 	pass
