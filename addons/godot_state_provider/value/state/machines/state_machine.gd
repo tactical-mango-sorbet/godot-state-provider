@@ -16,10 +16,13 @@ func set_state(value: State) -> void:
 	if state != null:
 		if value.is_type(state.type):
 			return
-		state._on_exit()
+		await state._on_exit()
 	state = value
-	state._on_enter()
+	await state._on_enter()
 	state_changed.emit(state)
+
+func init_new_state(script: Script) -> void:
+	await set_state(script.new())
 
 func _accepts_state(val: State) -> bool:
 	return val != null and val.inherits(get_state_type())
