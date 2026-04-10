@@ -9,8 +9,8 @@ func _init(script_factory: Callable = Callable.create(self, "default_script_fact
 		
 	_value_container = LazyContainer.new(value_factory, script_factory)
 
-func default_script_factory() -> Script:
-	return StateMachine
+func _enter_tree() -> void:
+	return get_value()
 
 func _on_state_changed(_state) -> void:
 	pass

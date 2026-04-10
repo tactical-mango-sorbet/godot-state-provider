@@ -1,9 +1,12 @@
 class_name MultiProvider extends BaseProvider
 
-@export var scripts: Array[Script]
+@export var scripts: Array[Script] = []
 
 func get_provider_scripts() -> Array[Script]:
-	return scripts.duplicate()
+	var array = scripts.duplicate()
+	if value_script != null:
+		array.append(value_script)
+	return array
 
 func map_script_to_provider(script: Script) -> Provider:
 	return Provider.new(func() -> Script: return script)

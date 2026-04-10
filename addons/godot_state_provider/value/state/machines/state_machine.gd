@@ -4,6 +4,11 @@ signal state_changed(state: State)
 
 var state: State
 
+func _init(initialState: State = null) -> void:
+	if initialState == null:
+		push_warning(identifier + " should be initialised with a state however it was not")
+	state = initialState
+
 func get_state_type() -> Script:
 	return State
 
